@@ -104,12 +104,12 @@ az configure --defaults \
     spring=${SPRING_APPS_SERVICE}
 ```
 
-### Create applications in Azure Spring Apps
+### Create application in Azure Spring Apps
 
-Create an application for each service:
+Create an application:
 
 ```shell
-az spring app create --name ${SERVICE_APP} --assign-endpoint true --instance-count 1 --memory 1Gi &
+az spring app create --name ${SERVICE_APP} --assign-endpoint true --instance-count 1 --memory 1Gi
 ```
 > Note: The app will take around 2-3 minutes to create.
 
@@ -124,6 +124,8 @@ az spring app deploy --name ${SERVICE_APP} \
 > Note: Deploying the application will take 5-10 minutes
 
 ### Test the Application
+
+Run the following commands
 
 ```shell
 export APP_URL=$(az spring app show --name ${SERVICE_APP} --query properties.url | tr -d '"')
