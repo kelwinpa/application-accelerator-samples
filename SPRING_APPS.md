@@ -1,4 +1,4 @@
-## Deploying to Azure Spring Apps with Azure CLI
+## Create Azure Spring Apps with Azure CLI
 
 ### Login to Azure
 
