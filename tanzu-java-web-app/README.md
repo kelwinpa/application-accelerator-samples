@@ -106,7 +106,7 @@ az spring app deploy --name ${SERVICE_APP} \
 Run the following commands
 
 ```shell
-export APP_URL=$(az spring app show --name tanzu-java-web-app --query properties.url | tr -d '"')
+export APP_URL=$(az spring app show --name ${SERVICE_APP} --query properties.url | tr -d '"')
 
 curl "${APP_URL}"
 ```
