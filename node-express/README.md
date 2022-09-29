@@ -45,7 +45,8 @@ Create an application:
 az spring app create --name ${SERVICE_APP} \
   --assign-endpoint true \
   --instance-count 1 \
-  --memory 1Gi
+  --memory 1Gi \
+  --env "PORT=8080"
 ```
 > Note: The app will take around 2-3 minutes to create.
 
