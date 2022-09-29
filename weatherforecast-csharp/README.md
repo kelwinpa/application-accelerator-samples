@@ -50,7 +50,7 @@ To access the deployed app use the URL shown under "Workload Knative Services" a
 
 This depends on the TAP installation having DNS configured for the Knative ingress.
 
-## Deploying to Azure Sping Apps with Azure CLI
+## Deploying to Azure Spring Apps with Azure CLI
 
 ### Login to Azure
 
@@ -133,6 +133,5 @@ Run the following commands
 ```shell
 export APP_URL=$(az spring app show --name ${SERVICE_APP} --query properties.url | tr -d '"')
 
-open "${APP_URL}/WeatherForecast"
+curl "${APP_URL}/WeatherForecast"
 ```
-
